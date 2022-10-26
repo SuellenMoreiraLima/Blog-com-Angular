@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "user": "SuellenMoreiraLima",
+      "title": "title of post",
+      "postContent": "content of post",
+      "subtitle": "subtitle of post",
+      "id": 1
+    },
+    {
+      "user": "suellen.moreira.lima",
+      "title": "teste",
+      "postContent": "testando",
+      "id": 2
+    }
+  ]
+}
