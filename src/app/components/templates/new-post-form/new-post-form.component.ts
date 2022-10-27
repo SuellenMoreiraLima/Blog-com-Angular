@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewPostFormComponent implements OnInit {
 
-  disable = true;
+  disabled = true;
   post: Post = {
     user: "",
     title: "",

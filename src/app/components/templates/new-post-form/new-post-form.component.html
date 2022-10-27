@@ -1,6 +1,7 @@
 <mat-card>
     <mat-card-title>
         <h1>New Post</h1>
+    </mat-card-title>
         <mat-card-subtitle>
             <h2>What do you watching</h2>
         </mat-card-subtitle>
@@ -15,12 +16,11 @@
                 <input matInput [(ngModel)]="post.title" />
                 <mat-hint>Ex.: About Matrix 2021</mat-hint>
             </mat-form-field>
-            <mat-form-field appearance="outline" class="textarea">
+            <mat-form-field appearance="outline" class="textArea">
                 <mat-label>Write about do you watching ...</mat-label>
                 <textarea matInput class="textAreaContent" [(ngModel)]="post.postContent"></textarea>
             </mat-form-field>
         </mat-card-content>
-    </mat-card-title>
     <mat-card-actions align="end">
         <button mat-button color="primary" (click)="publish()" [disabled]="post.user && post.title && post.postContent ? 
     false : true">
@@ -30,6 +30,5 @@
             {{ post.postContent == "" ? "Back" : "Cancel"}}
             <i class="material-icons">cancel</i>
         </button>
-
     </mat-card-actions>
 </mat-card>

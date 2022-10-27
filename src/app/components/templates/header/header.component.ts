@@ -1,3 +1,5 @@
+import { AboutComponent } from './../about/about.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   about(){
-    console.log("mensagem")
+    this.dialog.open(AboutComponent)
   }
 
 }
