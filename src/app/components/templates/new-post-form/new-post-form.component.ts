@@ -1,3 +1,4 @@
+import { NewPostActionsComponent } from './../new-post-actions/new-post-actions.component';
 import { PostServiceService } from './../../../services/post-service.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Post } from './post-form.model';
@@ -24,23 +25,21 @@ export class NewPostFormComponent implements OnInit {
 
   ) { }
 
-  ngOnInit(){}
+  ngOnInit() { }
 
   publish() {
     this.postService.newPost(this.post).subscribe(() => {
-      this.dialog.closeAll;
+      this.dialog.closeAll();
       this.postService.showMessage("New post added", true);
-
-      //Reflesh na pagina quando for realizado novo post
       setTimeout(() => {
         window.location.reload();
-      }, 1000)
+      }, 1000);
     })
   }
 
   cancel() {
     if (this.post.postContent != "") {
-      this.dialog.open(NewPostFormComponent)
+      this.dialog.open(NewPostActionsComponent);
     } else {
       this.dialogRef.close();
     }

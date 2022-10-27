@@ -18,6 +18,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { NewPostActionsComponent } from './components/templates/new-post-actions/new-post-actions.component';
+import { PostsComponent } from './views/posts/posts.component';
+import { PostsButtonComponent } from './views/posts-button/posts-button.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { NewPostActionsComponent } from './components/templates/new-post-actions
     HeaderComponent,
     NewPostFormComponent,
     NewPostCardComponent,
-    NewPostActionsComponent
+    NewPostActionsComponent,
+    PostsComponent,
+    PostsButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
